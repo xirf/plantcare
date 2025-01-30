@@ -96,10 +96,16 @@ class PlantCard extends StatelessWidget {
           children: [
             Icon(FeatherIcons.droplet, size: 16, color: AppColors.accentColor),
             const SizedBox(width: 4),
-            Text(
-              'In ${plant.daysToWater} days',
-              style: TextStyle(
-                  color: AppColors.accentColor, fontWeight: FontWeight.bold),
+            Flexible(
+              child: Text(
+                'In ${plant.daysToWater} days',
+                overflow: TextOverflow.ellipsis,
+                softWrap: false,
+                style: TextStyle(
+                  color: AppColors.accentColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
